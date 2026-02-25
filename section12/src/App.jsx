@@ -28,6 +28,8 @@ const mockData = [
   },
 ];
 
+//return이 새로운 참조값이면 리렌더, 같은값이면 리렌더링 안됨
+//dispatch : useState의 set함수와 같은 맥락
 function reducer(state, action) {
   switch (action.type) {
     case "CREATE":
