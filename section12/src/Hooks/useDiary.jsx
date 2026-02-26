@@ -7,6 +7,7 @@ const useDiary = (id) => {
   const [curDiaryItem, setCurDiaryItem] = useState();
 
   const nav = useNavigate();
+
   //현재일기 읽어오기
   useEffect(() => {
     /**컴포넌트가 호출될때(렌더될때마다 무조건) nav("/", { replace: true });를 실행하기 때문에

@@ -5,6 +5,7 @@ import Editor from "../components/Editor";
 import { useContext, useEffect, useState } from "react";
 import { DiaryDispatchContext, DiaryStateContext } from "../App";
 import useDiary from "../Hooks/useDiary";
+import usePageTitle from "../Hooks/usePageTitle";
 
 const Edit = () => {
   //params url로 전달받은 값
@@ -12,6 +13,7 @@ const Edit = () => {
   const nav = useNavigate();
   const { onDelete, onUpdate } = useContext(DiaryDispatchContext);
   const curDiaryItem = useDiary(params.id);
+  usePageTitle(`${params.id}번 일기 수정`);
 
   //일기 삭제 로직
   const onClickDelete = () => {
